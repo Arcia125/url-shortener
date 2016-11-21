@@ -16,11 +16,16 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/new/:protocol//:originalUrl', (req, res) => {
-    const origUrl = `${req.params.protocol}//${req.params.originalUrl}`;
+app.get('/new/*', (req, res) => {
+    let origUrl = req.params[0];
     if (!validUrl.isWebUri(origUrl)) {
-        res.send('Invalid URL, make sure you use the following format: "http(s)://example.com"');
-        return;
+        // attempt to create a valid url from the user's input
+        origUrl = `https://${origUrl}`;
+        if (!validUrl.isWebUri(origUrl)) {
+            res.send(`Invalid URL, make sure you use the following format: "http(s)://example.com".
+                You entered: ${origUrl}`);
+            return;
+        }
     }
     let urlCollection = db.get().collection('urls');
 
