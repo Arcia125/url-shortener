@@ -1,0 +1,25 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "\"# url-shortener\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arcia125/url-shortener.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arcia125/url-shortener/issues"
+  },
+  "homepage": "https://github.com/Arcia125/url-shortener#readme",
+  "dependencies": {
+    "base64url": "^2.0.0",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.11",
+    "valid-url": "^1.0.9"
+  }
+}

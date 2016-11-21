@@ -1,0 +1,36 @@
+<!doctype html>
+
+<head>
+    <style>
+    body {
+        font-family: Helvetica, Arial, sans-serif;
+    }
+    
+    .page-content {
+        margin-right: auto;
+        margin-left: auto;
+        width: 80vw;
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+    
+    .code-example {
+        color: green;
+    }
+    </style>
+</head>
+
+<body>
+    <div class='page-content'>
+        <h1 class='page-header'>Node API: URL Shortener Microservice</h1>
+        <h3 class='page-text'>User stories:</h3>
+        <ul class='user-story'>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</ul>
+        <ul class='user-story'>When I visit that shortened URL, it will redirect me to my original link.</ul>
+        <h2 class='page-subheader'>Example usage:</h2>
+        <code class='code-example'>https://xs-url.herokuapp.com/new/http://www.google.com</code>
+        <h2 class='page-subheader'>Example output:</h2>
+        <code class='code-example'>{"original_url":"http://www.google.com","short_url":"https://xs-url.herokuapp.com/2871"}</code>
+    </div>
+</body>
+
+</html>
